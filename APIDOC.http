@@ -1,0 +1,37 @@
+
+
+# ============= ADMIN REGISTRATION ============ #
+
+#api call for admin registration
+###
+POST http://127.0.0.1:8000/accounts/admin/
+Content-Type: application/json
+
+{
+    "username":"adminB",
+    "email":"adminB@gmail.com",
+    "password":"adminB123",
+    "phone":"478965783"
+}
+
+#api call for admin registration
+###
+POST http://127.0.0.1:8000/accounts/user/
+Content-Type: application/json
+
+{
+    "username":"userA",
+    "email":"userA@gmail.com",
+    "password":"userA123",
+    "phone":"47896789"
+}
+
+# route to token authentication
+###
+POST http://127.0.0.1:8000/accounts/token/
+Content-Type: application/json
+
+{
+    "username":"adminA",
+    "password":"adminA123"
+}
