@@ -35,3 +35,57 @@ Content-Type: application/json
     "username":"adminA",
     "password":"adminA123"
 }
+
+
+# ============= PRODUCT CATEGORY LIST,CREATE ============ #
+
+# api call for listing product categories
+###
+GET http://127.0.0.1:8000/item_category/product/all/
+Accept: application/json
+Authorization: Token 2137395f1eba01566b3e6e3784936f50d2c6bfcd
+
+# api call for creating product categories
+###
+POST http://127.0.0.1:8000/item_category/product/add/
+Content-Type: application/json
+Authorization: Token 2137395f1eba01566b3e6e3784936f50d2c6bfcd
+
+{
+    "title":"groceries",
+    "description":"household groceries available",
+    "price_range":"10-5,000",
+    "supplier_name":"groceries supplier 1"
+}
+
+
+# ============= PRODUCT CATEGORY RETRIEVE,UPDATE,DELETE ============ #
+
+# api call for listing one product categories
+###
+GET http://127.0.0.1:8000/item_category/product/one/1/
+Accept: application/json
+Authorization: Token 2137395f1eba01566b3e6e3784936f50d2c6bfcd
+
+# api call for updating one product category
+###
+PUT http://127.0.0.1:8000/item_category/product/1/
+Content-Type: application/json
+Authorization: Token 2137395f1eba01566b3e6e3784936f50d2c6bfcd
+
+{
+  "id": 1,
+  "owner": "adminA",
+  "title": "electronics",
+  "description": "Elctronic items needed in a house",
+  "price_range": "250-30,000",
+  "supplier_name": "electric supplier A",
+  "created_at": "2026-10-26T16:59:18.067761Z",
+  "updated_at": "2026-10-26T16:59:18.067761Z"
+}
+
+# api call for deleting one product categories
+###
+DELETE http://127.0.0.1:8000/item_category/product/3/
+Accept: application/json
+Authorization: Token 2137395f1eba01566b3e6e3784936f50d2c6bfcd

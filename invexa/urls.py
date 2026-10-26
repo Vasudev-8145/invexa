@@ -22,4 +22,7 @@ urlpatterns = [
 
     # route to accounts
     path("accounts/",include("accounts.urls")),
+
+    # route to itam_category
+    path("item_category/",include("item_category.urls")),
 ]
